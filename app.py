@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect
 from forms import SignupForm, SignInForm
 
 app = Flask(__name__)
@@ -34,13 +34,12 @@ def genres_page():
 @app.route("/sign_in")
 def sign_in_page():
     form = SignInForm()
-    return render_template('sign_in.html', title='Sign in', form=form)
+    return render_template('sign_in.html', title='Sign In', form=form)
 
-@app.route("/sign_up")
+@app.route("/sign_up", methods=['GET', 'POST'])
 def sign_up_page():
     form = SignupForm()
-    return render_template('sign_up.html', title='Sign up', form=form)
-
-@app.route("/movie_picker")
-def movie_picker_page():
-    return render_template('movie_picker.html', title='Movie Picker')
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!', 'sucess')
+        return redirect(url_for('main_page'))
+    return render_template('sign_up.html', title='Sign Up', form=form)
