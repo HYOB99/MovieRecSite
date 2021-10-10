@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="../static/navbar.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../static/main.css">
     {% if title %}
         <title>{{title}}</title>
     {% else %}
         <title>Home Page</title>
     {% endif %}
-    <title>About Page</title>
 </head>
 <body>
 <header>
-    <div class="container">
-        <h1 class="logo"></h1>
-
-        <nav>
-            <ul>
-                <li><a href="http://localhost:5000/home">Home</a></li>
-                <li><a href="http://localhost:5000/about">About</a></li>
-                <li><a href="http://localhost:5000/genres">Genres</a></li>
-                <li><a href="http://localhost:5000/recent_movies">Recent movies</a></li>
-            </ul>
-        </nav>
-    </div>
+    <img src="https://api.freelogodesign.org/files/b09c45b71eb54116b4ecba31cad6cf86/thumb/logo_200x200.png?v=0" alt="Logo Pictures" width="125px" height="125px">
+    <!--Decided to name this site "Movie Picker" 
+    Imported the logo from https://editor.freelogodesign.org/?category=15&companyName=Movie%20Picker.
+    Free to create and download. No copyright issues. -->
+    <nav>
+        <ul class="nav_links">
+            <li><a href="http://localhost:5000/home">Home</a></li>
+            <li><a href="http://localhost:5000/about">About</a></li>
+            <li><a href="http://localhost:5000/genres">Genres</a></li>
+            <li><a href="http://localhost:5000/recent_movies">Recent movies</a></li>
+        </ul>
+    </nav>
+        <a class="cta" href="http://localhost:5000/sign_in"><button>Sign in</button></a>
+        <a class="cta" href="http://localhost:5000/sign_up"><button>Sign up</button></a>
 </header>
-    <div class="container">
+        <div class="message-box">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        <!-- with_categories=true gets sucess messages; bootstrap class -->
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        </div>
         {% block content %}{% endblock %}
-    </div>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
-</body>
 </html>
