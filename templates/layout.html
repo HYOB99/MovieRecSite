@@ -18,14 +18,14 @@
     Free to create and download. No copyright issues. -->
     <nav>
         <ul class="nav_links">
-            <li><a href="http://localhost:5000/home">Home</a></li>
-            <li><a href="http://localhost:5000/about">About</a></li>
-            <li><a href="http://localhost:5000/genres">Genres</a></li>
-            <li><a href="http://localhost:5000/recent_movies">Recent movies</a></li>
+            <li><a href="{{ url_for('main_page') }}">Home</a></li>
+            <li><a href="{{ url_for('about_page') }}">About</a></li>
+            <li><a href="{{ url_for('genres_page') }}">Genres</a></li>
+            <li><a href="{{ url_for('recent_movies_page') }}">Recent movies</a></li>
         </ul>
     </nav>
-        <a class="cta" href="http://localhost:5000/sign_in"><button>Sign in</button></a>
-        <a class="cta" href="http://localhost:5000/sign_up"><button>Sign up</button></a>
+        <a class="cta" href="{{ url_for('sign_in_page') }}"><button>Sign in</button></a>
+        <a class="cta" href="{{ url_for('sign_up_page') }}"><button>Sign up</button></a>
 </header>
         <div class="message-box">
         {% with messages = get_flashed_messages(with_categories=true) %}
