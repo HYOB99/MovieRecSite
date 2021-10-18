@@ -1,11 +1,19 @@
-# Movie Recommendation System
+<h1>Movie Recommendation System</h1>
 
-## 프로젝트 계획 동기
-영화를 평소에 좋아하는데, 그것의 데이터를 가지고 무엇을 할 수 있을까 고민하던 중 자기계발을 위해 영화 추천 웹사이트를 개발해서 어떤 영화를 볼 것인지 결정하는 사람들과 나에게 도움을 주고 싶었다.
 
-## 프로젝트 목표
-1. 영화 데이터를 IMDb 에서 가져와서 SQL 을 이용해 데이터베이스를 구축한다.
-2. 웹사이트를 구축하고 최신 영화들을 넷플릭스 등 사이트로 리다이렉트를 한다.
-3. 로그인 시스템을 구축해서 개인 데이터를 저장한다.
-4. 장르나 감독에 따라서 영화 추천 시스템을 구축한다.
+<h2>Introduction</h2>
+The goal of our project is to create a movie recommendation system. With little knowledge in machine learning, the recommendation system will likely not be functioning as we want. To achieve our ultimate goal, we are learning <a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice" target="_blank">TensorFlow</a> course offered by Coursera. As of now, the system only works in localhost address; however, we are planning on hosting it once we complete building the website.
+
+
+<h2>Design Process</h2>
+This project is in progress in Python Project Team in <a href="illinois.campuslabs.com/engage/organization/codable", target="_blank">Codable at UIUC</a>. For front end, we used <code>HTML</code>, <code>CSS</code>, and <code>Python</code>. For back end, we used <code>Flask</code>, and for our database, we used <code>SQLAlchemy</code>.  
+
+<h2>Subgoals</h2>
+<ol>
+  <li>Get the movie data from <a href="https://datasets.imdbws.com/", target="_blank">IMDb</a> and clean the data using <code>SQL</code>.</li>
+  <li>Create a website and redirect the movies users want to watch to the streaming sites such as Netflix.</li>
+  <li>Create a login system and secure the user data.</li>
+  <li>Structure a movie recommendation system based on individual's watching history.</li>
+ </ol>
+
 
