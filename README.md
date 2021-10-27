@@ -6,7 +6,7 @@ The goal of our project is to create a movie recommendation system. With little 
 
 
 <h2>Design Process</h2>
-This project is in progress in Python Project Team in <a href="illinois.campuslabs.com/engage/organization/codable">Codable at UIUC</a>. For front end, we used <code>HTML</code>, <code>CSS</code>, and <code>Python</code>. For back end, we used <code>Flask</code>, and for our database, we used <code>SQLAlchemy</code>.  
+This project is in progress in Python Project Team in <a href="illinois.campuslabs.com/engage/organization/codable">Codable at UIUC</a>. For front end, we were planning on using <code>React.js</code>, but ended up using <code>HTML</code>, <code>CSS</code>, and <code>Python</code> as we were told to use <code>python</code> as much as possible. For back end, we used <code>Flask</code>, and for our database, we used <code>SQLAlchemy</code>.  
 
 <h2>Subgoals</h2>
 <ol>
