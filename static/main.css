@@ -87,3 +87,11 @@ p {
     text-align: center;
     color: #fff;
 }
+
+.text-color {
+    color: #ffff;
+}
+.text-color:hover {
+    color: rgba(0,136,169,1);
+    font-weight: bold;
+}
