@@ -45,8 +45,8 @@
 
         </fieldset>
         <br>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-outline-info") }}
+        <div class="form-group center">
+            <button class="btn btn-primary" type="submit">Sign In</button>
         </div>
         <br>
         <small class="text-muted ml-2">
@@ -58,8 +58,7 @@
     <small class="text-muted">
         Don't Have An Account? 
         <br><br>
-        <a class="text-color" href="{{ url_for('sign_up_page') }}">Sign Up Now!</a>
-        <!-- <a class="cta" href="http://localhost:5000/sign_up"><button class="button">Sign up</button></a> -->
+        <a class="center" href="{{ url_for('sign_up_page') }}"><button>Sign Up</button></a>
     </small>
 </div>
 {% endblock content %}
