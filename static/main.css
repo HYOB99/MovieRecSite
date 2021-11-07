@@ -15,6 +15,13 @@ li, a, button {
     text-decoration: none;
 }
 
+/* .exception_a {
+    font-weight: none;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+} */
+
 header {
     display: flex;
     justify-content: space-evenly;
@@ -70,7 +77,6 @@ p {
 }
 
 .content-section {
-    /*background: rgba(0,136,169,1);*/
     padding: 10px 20px;
     border: 1px solid rgba(0,136,169,1);
     border-radius: 3px;
@@ -93,5 +99,43 @@ p {
 }
 .text-color:hover {
     color: rgba(0,136,169,1);
-    font-weight: bold;
+}
+
+.hover-fx {
+    font-size: 36px;
+    display: inline-block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    background-color: #24252A;
+    transition: 300ms;
+}
+
+.hover-fx:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    box-sizing: content-box;
+    box-shadow: 0 0 0 3px #fff;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 300ms;
+}
+
+.hover-fx:hover {
+    background-color: #fff;
+    color: #00989A;
+}
+
+.hover-fx:hover:after {
+    opacity: 1;
+    transform: scale(1.15);
 }
