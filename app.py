@@ -65,3 +65,11 @@ def sign_up_page():
         flash(f'Account created for {form.username.data}!', 'sucess')
         return redirect(url_for('main_page'))
     return render_template('sign_up.html', title='Sign Up', form=form)
+
+@app.route("/sign_in_test")
+def sign_in_test_page():
+    return render_template('signintest.html', title='SignUpTest')
+
+@app.route("/sign_up_test")
+def sign_up_test_page():
+    return render_template('signuptest.html', title='SignInTest')
