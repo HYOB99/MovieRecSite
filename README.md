@@ -10,7 +10,7 @@ This project is in progress in Python Project Team in <a href="illinois.campusla
 
 <h2>Subgoals</h2>
 <ol>
-  <li>Get the movie data from <a href="https://datasets.imdbws.com/">IMDb</a> and clean the data using <code>SQL</code>.</li>
+  <li>Get the movie data from <a href="https://datasets.imdbws.com/">IMDb</a> and clean the data using <code>Pandas</code>.</li>
   <li>Create a website and redirect the movies users want to watch to the streaming sites such as Netflix.</li>
   <li>Create a login system and secure the user data.</li>
   <li>Structure a movie recommendation system based on individual's watching history.</li>
