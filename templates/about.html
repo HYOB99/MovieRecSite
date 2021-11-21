@@ -1,33 +1,41 @@
 {% extends "layout.html" %}
 {% block content %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <h1>Meet developers!</h1><br><br>
-    <div class="indent">
+    <link rel="stylesheet" href="../static/about.css">
+    <div class="team-section">
+        <h1>Meet developers!</h1>
+        <span class="border"></span>
+        <div class="ps">
+            <a href="#p1"><img src="https://lh3.googleusercontent.com/2o-HIfxKpbf2h7aLONS7X9VOIuyR0ISkXADVPuZLF1R7ujdyaYjqtBGkiKMFCHw9XqmorvgDfihshC5iw4BvyvtJA7u3uvfkexaDz2mLi63proDo6fyhPLdRnPjnAxhHkZOmX_z2Ww=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/2o-HIfxKpbf2h7aLONS7X9VOIuyR0ISkXADVPuZLF1R7ujdyaYjqtBGkiKMFCHw9XqmorvgDfihshC5iw4BvyvtJA7u3uvfkexaDz2mLi63proDo6fyhPLdRnPjnAxhHkZOmX_z2Ww=w600-h315-p-k" alt="Hakyung Yun"></a>
+            <a href="#p2"><img src="https://lh3.googleusercontent.com/qM5P8Qj4-yxkrKGGXwMUtjM6BbjV_KHivM6_e1PgqEOXBr2aKC0uPn7KC0zMy_3QjmuC33BaesUujqCeRhS8IanGVHlskzPc_-paJt3t9_9Gw4IhY5S6rM53hUs1VIl-hSzuChVeVQ=s299-p-k" alt="Earl chae"></a>
+        </div>
     <!-- target="_blank" opens the linked page in a new tab or window. It is a useful feature, but there is a security risk that we should be aware of. -->
     <!-- The new tab gains limited access to the linking page via window.opener, which it can then use to alter the linking page's URL via window.opener.location -->
     <!-- This might be a problem if the external resource is not trustworthy; migt have been hacked, the domain has changed owners over the years etc. -->
     <!-- In order to prevent such risk, I am adding rel="noopener noreferrer" attribute to all of target="_blank" links -->
     <!-- Saw it from a instgram post -->
     <!-- excerpted from https://codepen.io/SeedThemes/pen/kkQaNE and modified github icon hover effect.-->
-    <p style="font-size:25px">Hakyung Yun</p><br>
-    <p style="font-size: 18px">Hakyung Yun, who also goes by Peter, is a sophomore undergraduate student at the University of Illinois at Urbana-Champaign, studying Computer Engineering. He spent most of his life in Korea but has gone to school in America since 2017. His top interests are software engineering, web development, and data analytics.</p>
-    <br>
-    <a class="fa fa-github hover-fx" style="font-size:40px" href="https://github.com/hakyung4" target="_blank" rel="noopener noreferrer"></a><br>
-    <br>
-    <a class="fa fa-linkedin-square hover-fx" style="font-size: 40px" href="https://www.linkedin.com/in/hakyung-peter-yun-3204061b8/" target="_blank" rel="noopener noreferrer"></a>
-    <br><br>
-    <p style="font-size:25px">Earl Chae</p><br>
-    <p style="font-size: 18px">Hyobjeong Chae, who also goes by Earl, is a senior undergraduate student at the University of Illinois at Urbana-Champaign, studying Statistics and Industrial Engineering. His eagerness and passion for learning led his educational journey to America. His top interests are data analytics and IT consulting.</p>
-    <br>
-    <a class="fa fa-github hover-fx" style="font-size:40px" href="https://github.com/HYOB99" target="_blank" rel="noopener noreferrer"></a><br>
-    <br>
-    <a class="fa fa-linkedin-square hover-fx" style="font-size:40px" href="https://www.linkedin.com/in/earlchae/" target="_blank" rel="noopener noreferrer"></a>
+    <div class="section" id="p1">
+        <span class="name">Hakyung Yun</span>
+        <span class="border"></span>
+        <p>Hakyung, who also goes by Peter, is a sophomore undergraduate student at the University of Illinois at Urbana-Champaign, studying Computer Engineering. He spent most of his life in Korea but has gone to school in America since 2017. His top interests are software engineering, web development, and data analytics.</p>
+        <br>
+        <a class="fa fa-github hover-fx" style="font-size:40px" href="https://github.com/hakyung4" target="_blank" rel="noopener noreferrer"></a>
+        <a class="fa fa-linkedin-square hover-fx" style="font-size: 40px" href="https://www.linkedin.com/in/hakyung-peter-yun-3204061b8/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="fa fa-envelope hover-fx" style="font-size: 40px" href="mailto: hamiram9@gmail.com"></a>
+
+    </div>
+    
+    <div class="section" id="p2">
+        <span class="name">Earl Chae</span>
+        <span class="border"></span>
+        <p>Hyobjeong Chae, who also goes by Earl, is a senior undergraduate student at the University of Illinois at Urbana-Champaign, studying Statistics and Industrial Engineering. His eagerness and passion for learning led his educational journey to America. His top interests are data analytics and IT consulting.</p>
+        <br>
+        <a class="fa fa-github hover-fx" style="font-size:40px" href="https://github.com/HYOB99" target="_blank" rel="noopener noreferrer"></a>
+        <a class="fa fa-linkedin-square hover-fx" style="font-size:40px" href="https://www.linkedin.com/in/earlchae/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="fa fa-envelope hover-fx" style="font-size: 40px" href="mailto: darktempler120@gmail.com"></a>
+    </div>
     <br><br><br>
     <p>The source code for this project can be found <a class="text-color" href="https://github.com/HYOB99/MovieRecSite" target="_blank" rel="noopener noreferrer"><u>here</u></a>.</p>
-    <br><br><br><br><br>
-    <h3>Contact Us!</h3>
     <br>
-    <p>Hakyung Yun: <a class="text-color" href="mailto: hamiram9@gmail.com"><u>hamiram9@gmail.com</u></a></p><br>
-    <p>Earl Chae: <a class="text-color" href="mailto: darktempler120@gmail.com"><u>darktempler120@gmail.com</u></a></p><br><br>
-</div>
 {% endblock content %}
