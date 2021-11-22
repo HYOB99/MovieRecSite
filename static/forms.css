@@ -56,8 +56,16 @@ button:hover {
 }
 
 h1{
-    color:hsl(0, 4%, 9%);
+    color: #ffff;
     font-size: 30px;
+}
+h1:after { 
+    content: '';
+    background:hsl(0, 0%, 100%);
+    display: block;
+    height: 3px;
+    width: 90px;
+    margin: 10px auto;
 }
 
 p {
