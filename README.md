@@ -17,4 +17,6 @@ This project is in progress in Python Project Team in <a href="illinois.campusla
  </ol>
 
 <h2>How to run the website on localhost</h2>
-<p>To run the website on localhost, after cloning the repository to your local machine, you must activate conda environment first. You do not have to change your working directory to MovieRecSite directory; you can activate conda environment wherever you want. To do so, simply type <code>conda activate MovieRecSite</code>. If you succesfully activated conda environment, you should see <code>(conda)</code> popping up. After changing your working directory to MovieRecSite directory, type <code>export FLASK_ENV=development</code> to activate debug mode. Debug mode works like a live server on visual studio code; if you change your source code and refresh the website, it will apply changes you have made without making you run the program again. If you do not see any errors so far, you are ready to run this website. You can run it by simply typing <code>flask run</code>.
+<p><code>conda activate MovieRecSite</code> to activate the conda environment.</p> 
+<p><code>export FLASK_ENV=development</code> to activate debug mode. Debug mode works like a live server on visual studio code.</p>
+<p>Now, you are ready to run this website by typing <code>flask run</code>.
