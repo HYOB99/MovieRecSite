@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'c4ebd5c19784795cce458b28cf63e20a' #Used Secrets module in python to generate a secret key to protect against some potential attacks. 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' #specifying the relative path to the current file
 db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
 
 #creating user model
 class User(db.Model):
@@ -56,6 +57,10 @@ def sign_in_page():
 def sign_up_page():
     form = SignupForm()
     if form.validate_on_submit():
-        flash(f'Account created for {form.username.data}!', 'sucess')
-        return redirect(url_for('main_page'))
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8') #hashing password
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user) #add user to the database
+        db.session.commit() #commit changes to database
+        flash('Your account has been created!', 'sucess')
+        return redirect(url_for('sign_in_page'))
     return render_template('sign_up.html', title='Sign Up', form=form)
