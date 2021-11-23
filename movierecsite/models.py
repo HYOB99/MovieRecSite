@@ -1,7 +1,14 @@
 from datetime import datetime
-from movierecsite import db
+from movierecsite import db, login_manager
+from flask_login import UserMixin
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+    
 #creating user model
-class User(db.Model):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True) #it is going to be a primary key and it's unique.
     username = db.Column(db.String(20), unique=True, nullable=False) #Max 20 characters. It can't be a null value.
     email = db.Column(db.String(120), unique=True, nullable=False) #Max 120 characters. Can't be a null value. 
