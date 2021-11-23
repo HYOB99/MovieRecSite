@@ -39,11 +39,12 @@
     filter: none;
 }
 .section {
-    width: 600px;
+    width: 650px;
     margin: auto;
     font-size: 20px;
     color: white;
     text-align: justify;
+    word-break: break-word;
     height: 0;
     overflow: hidden;
 }
@@ -61,6 +62,3 @@
     display: inline-block;
     text-align: center;
 }
-/* p{
-    text-align: center;
-} */
