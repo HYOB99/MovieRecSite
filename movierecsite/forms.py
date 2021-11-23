@@ -1,8 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from flask_sqlalchemy import SQLAlchemy
-from app import User
 
 
 class SignupForm(FlaskForm):
@@ -12,10 +10,10 @@ class SignupForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=2, max=20), EqualTo('password')])
     submit = SubmitField('Sign up')
     #check if username is already used
-    def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first() #If there's a value here, we are getting the first value. Otherwise, we get nothing.
-        if user: #if user is anything other than none, it throws out an error
-            raise ValidationError('Sorry, that username is taken. Please try with another one.')
+    #def validate_username(self, username):
+        #user = User.query.filter_by(username=username.data).first() #If there's a value here, we are getting the first value. Otherwise, we get nothing.
+        #if user: #if user is anything other than none, it throws out an error
+            #raise ValidationError('Sorry, that username is taken. Please try with another one.')
 class SignInForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(min=2, max=20)])
