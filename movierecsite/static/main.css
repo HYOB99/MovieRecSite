@@ -152,3 +152,11 @@ p {
 h2, h3 {
     color: hsl(0, 0%, 100%);
 }
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.bigger-text {
+    color: hsl(0, 0%, 100%);
+}
