@@ -1,49 +1,42 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="indent">
-    <div class="media-body">
-        <h2 class="account-heading">{{ current_user.username }}</h2>
-        <p class="text-secondary">{{ current_user.email }}</p>
-    </div>
-    <br>
-    <div class="bigger-text">
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-                <h1>Account Info</h1>
-                <br>
-                <div class="form-group">
-                    {{ form.username.label(class="form-control-label") }}
-                    <!-- check for validation errors -->
-                    {% if form.username.errors %}
-                        {{ form.username(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.username.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.username(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <br>
-                <div class="form-group">
-                    {{ form.email.label(class="form-control-label") }}
-                    <!-- check for validation errors -->
-                    {% if form.email.errors %}
-                        {{ form.email(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.email.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.email(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+            <h1>Account Info</h1>
+            <br>
+            <div class="form-group">
+                {{ form.username.label(class="form-control-label") }}
+                <!-- check for validation errors -->
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control form-control-lg") }}
+                {% endif %}
             </div>
-            <br><br><br>
-            <div class="form-group center">
-                <button class="btn btn-primary" type="submit">Update</button>
+            <br>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+                <!-- check for validation errors -->
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span><br>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        <br><br><br>
+            <div class="button-center">
+            <button class="btn btn-primary center" type="submit">Update</button>
             </div>
         </form>
     </div>

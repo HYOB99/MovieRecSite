@@ -23,26 +23,8 @@ header {
     padding: 8px;
 }
 
-.logo {
-    cursor: pointer;
-    float: left;
-}
-
-.nav_links {
-    list-style: none;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover {
-    color: #0088a9;
+h2, h3 {
+    color: hsl(0, 0%, 100%);
 }
 
 button {
@@ -69,16 +51,56 @@ h1{
 
 h1:after { 
     content: '';
+    position: relative;
     background:hsl(0, 0%, 100%);
     display: block;
     height: 3px;
-    width: 150px;
+    width: 50%;
     margin: 10px auto;
 }
 
 p {
     color: hsl(0, 0%, 100%);
     font-size: 20px;
+}
+
+.logo {
+    cursor: pointer;
+    float: left;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+.genres-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.genres-text:after{
+    content: '';
+    background:hsl(0, 0%, 100%);
+    display: block;
+    height: 0.5px;
+    width: 70px;
+    margin: 10px auto;
 }
 
 .content-section {
@@ -149,14 +171,12 @@ p {
     margin: 75px 0;
 }
 
-h2, h3 {
-    color: hsl(0, 0%, 100%);
-}
-
 .account-heading {
     font-size: 2.5rem;
 }
 
-.bigger-text {
-    color: hsl(0, 0%, 100%);
+.button-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
