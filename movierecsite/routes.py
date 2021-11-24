@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from movierecsite import app, db, bcrypt
-from movierecsite.forms import SignupForm, SignInForm
+from movierecsite.forms import SignUpForm, SignInForm, UpdateAccountForm
 from movierecsite.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -41,7 +41,7 @@ def sign_in_page():
 def sign_up_page():
     if current_user.is_authenticated:
         return redirect(url_for('main_page'))
-    form = SignupForm()
+    form = SignUpForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8') #hashing password. Using .decode('utf-8') to make it a string instead of binary.
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
@@ -56,7 +56,17 @@ def logout():
     logout_user()
     return redirect(url_for('main_page'))
 
-@app.route("/account")
+@app.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
-    return render_template('account.html', title='Account')
+    form = UpdateAccountForm()
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        db.session.commit()
+        flash('Your account has been successfully updated!', 'success')
+        return redirect(url_for('account'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    return render_template('account.html', title='Account', form=form)
