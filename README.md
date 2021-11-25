@@ -2,7 +2,7 @@
 
 
 <h2>Introduction</h2>
-The goal of our project is to create a movie recommendation system. With little knowledge in machine learning, the recommendation system will likely not be functioning as we want. To achieve our ultimate goal, we are learning <a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">TensorFlow</a> course offered by Coursera. As of now, the system only works in localhost address; however, we are planning on hosting it once we complete building the website.
+The goal of our project is to create a movie recommendation system. With little knowledge in machine learning, the recommendation system will likely not be functioning as we want. To achieve our ultimate goal, we are learning <a href="https://www.coursera.org/professional-certificates/tensorflow-in-practice">TensorFlow</a> course offered by Coursera. As of now, the system only works in localhost address; however, we are planning on hosting it once we complete building the website. <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask Documentation</a> and <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH">Flask Tutorial Video</a> substantially has helped this project.
 
 
 <h2>Design Process</h2>
