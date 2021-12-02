@@ -16,7 +16,7 @@
 .team-section h1{
     text-transform: uppercase;
     margin-bottom: 60px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-size: 30px;
 }
 .ps{
@@ -42,7 +42,7 @@
     width: 650px;
     margin: auto;
     font-size: 20px;
-    color: white;
+    color: hsl(0, 0%, 100%);
     text-align: justify;
     word-break: break-word;
     height: 0;

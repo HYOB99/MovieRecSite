@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     background-color: #24252A;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
 }
 
 li, a, button {
@@ -35,7 +35,7 @@ button:hover {
 }
 
 h1{
-    color: #ffff;
+    color: hsl(0, 0%, 100%);
     font-size: 30px;
 }
 h1:after { 
@@ -85,7 +85,7 @@ fieldset {
 }
 
 .text-color {
-    color: #ffff;
+    color: hsl(0, 0%, 100%);
 }
 .text-color:hover {
     color: rgba(0,136,169,1);
@@ -118,7 +118,7 @@ fieldset {
 }
 
 .forgot-pw {
-    color: #ffff;
+    color: hsl(0, 0%, 100%);
 }
 .forgot-pw:hover {
     color: rgba(0,136,169,1);
