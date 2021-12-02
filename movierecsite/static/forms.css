@@ -116,3 +116,10 @@ fieldset {
     justify-content: center;
     align-items: center;
 }
+
+.forgot-pw {
+    color: #ffff;
+}
+.forgot-pw:hover {
+    color: rgba(0,136,169,1);
+}
