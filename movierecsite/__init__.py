@@ -1,22 +1,29 @@
-import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
+from movierecsite.config import Config
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'c4ebd5c19784795cce458b28cf63e20a' #Used Secrets module in python to generate a secret key to protect against some potential attacks. 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' #specifying the relative path to the current file
-db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
-login_manager = LoginManager(app)
-login_manager.login_view = 'sign_in_page'
-app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_ADD_PROJ')
-app.config['MAIL_PASSWORD'] = 'lxcgxmvuixbkyxzg' #app password
-mail=Mail(app)
+db = SQLAlchemy()
+bcrypt = Bcrypt()
+login_manager = LoginManager()
+login_manager.login_view = 'users.sign_in_page'
+mail=Mail()
 
-from movierecsite import routes
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    
+    db.init_app(app)
+    bcrypt.init_app(app)
+    login_manager.init_app(app)
+    mail.init_app(app)
+    
+    from movierecsite.users.routes import users
+    from movierecsite.main.routes import main
+
+    app.register_blueprint(users)
+    app.register_blueprint(main)
+    
+    return app
