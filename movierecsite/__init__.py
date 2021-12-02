@@ -22,8 +22,10 @@ def create_app(config_class=Config):
     
     from movierecsite.users.routes import users
     from movierecsite.main.routes import main
+    from movierecsite.errors.handlers import errors
 
     app.register_blueprint(users)
     app.register_blueprint(main)
+    app.register_blueprint(errors)
     
     return app
