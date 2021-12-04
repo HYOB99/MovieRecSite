@@ -40,3 +40,6 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False) #id of an author. 
     def __repr__(self): #How our object is printed
         return f"Post('{self.title}','{self.date_posted}')"
+
+
+#test
